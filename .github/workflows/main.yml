@@ -1,0 +1,23 @@
+            - name: Genymotion SaaS Action
+  # You may pin to the exact commit or the version.
+  # uses: Genymobile/genymotion-saas-github-action@28dbbcbbc1d07b77c24fbcd4979529b238ffbc24
+  uses: Genymobile/genymotion-saas-github-action@v0.4
+  with:
+    # Email of your Genymotion Cloud SaaS account, if you don't have an account please create it first on [https://cloud.geny.io](https://cloud.geny.io/?&utm_source=web-referral&utm_medium=docs&utm_campaign=githubactions&utm_content=signup).
+    email: 
+    # Password of your Genymotion Cloud SaaS account.
+    password: 
+    # Instance recipe to use. Recipes can be listed with command line `gmsaas recipes list`,
+or check https://support.genymotion.com/hc/en-us/articles/360007473658-Supported-Android-devices-templates-for-Genymotion-Cloud-SaaS
+for a comprehensive list of all currently available recipes.
+    recipe_uuid: # optional
+    # If `adb_serial_port` option is set,
+the instance will be connected to ADB on `localhost:$adb_serial_port`.
+Otherwise it will be connected to a port given by your system,
+`gmsaas instances list` to know which one.
+    adb_serial_port: # optional
+    # Retrieve an instance index to avoid conflict on instance name.
+    instance_index: # optional, default is ${{ strategy.job-index }}
+    # Install a specific version of gmsaas (not recommended), default is the latest.
+    gmsaas_version: # optional
+          
